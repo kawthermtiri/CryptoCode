@@ -1,0 +1,184 @@
+/* Parent container for form and image */
+.crypter-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: linear-gradient(to right, #7164e4, #4233ca, #09014e);
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex; /* Align items horizontally */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center content vertically */
+  gap: 20px; /* Optional: adds space between the form and image */
+}
+
+/* Wrapper for the form and image to align them side by side */
+.form-image-wrapper {
+  display: flex; /* Align form and image horizontally */
+  align-items: center; /* Vertically center the items */
+  gap: 20px; /* Optional: adds space between the form and image */
+}
+
+/* Form container */
+.form-container {
+  background: #ffffff;
+  width: 50vw; /* 50% of the viewport width */
+  height: 50vw; /* Height equal to the width (square shape) */
+  max-width: 500px; /* Optional: to limit max size */
+  max-height: 500px; /* Optional: to limit max size */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Align form elements vertically */
+  justify-content: center; /* Center vertically inside the form */
+}
+
+/* Image container */
+.image-container {
+  display: inline-block;
+  width: 30%; /* Adjust size as needed */
+  height: auto;
+}
+
+/* Image styles */
+.immmm {
+  width: 100%; /* Make image fill the container */
+}
+
+img {
+  max-width: 100%; /* Ensure the image does not overflow */
+  height: auto; /* Maintain aspect ratio */
+}
+.crypter-button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.crypter-action-button {
+  background-color: #007bff; /* Couleur bleue */
+  color: #ffffff; /* Texte blanc */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px; /* Coins arrondis */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+  transition: all 0.3s ease; /* Transition douce */
+}
+
+.crypter-action-button:hover {
+  background-color: #0056b3; /* Bleu plus foncé au survol */
+  transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+.crypter-action-button:active {
+  transform: translateY(0); /* Revenir à la position d'origine lors d'un clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduction de l'ombre */
+}
+
+.cesar {
+  background-color: #1e90ff; /* Bleu spécifique pour César */
+}
+
+.affine {
+  background-color: #4682b4; /* Bleu spécifique pour Affine */
+}
+
+.vigenere {
+  background-color: #5f9ea0; /* Bleu spécifique pour Vigenère */
+}
+.crypter-title {
+  font-size: 28px;
+  color: #007bff; /* Bleu éclatant */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Légère ombre */
+}
+
+.input-message,
+.input-key {
+  width: 100%;
+  max-width: 400px; /* Limite la largeur */
+  padding: 12px 15px;
+  margin: 10px auto;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9; /* Fond clair */
+  border: 1px solid #ddd; /* Bordure grise */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+  outline: none;
+  transition: all 0.3s ease; /* Animation douce */
+  display: block;
+}
+
+.input-message:focus,
+.input-key:focus {
+  border-color: #007bff; /* Bordure bleue au focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Ombre lumineuse au focus */
+}
+
+.input-message::placeholder,
+.input-key::placeholder {
+  font-style: italic;
+  color: #aaa; /* Couleur du placeholder */
+}
+
+.navigate-decrypter-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navigate-decrypter-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.navigate-decrypter-button:active {
+  background-color: #003f7f;
+  transform: scale(0.95);
+}
+
+/* button home */
+.navigate-home-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navigate-home-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.navigate-home-button:active {
+  background-color: #003f7f;
+  transform: scale(0.95);
+}
+/* fin button home */
+

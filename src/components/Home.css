@@ -1,0 +1,45 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../image/3.png");
+  background-size: 100% 97%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding-top: -60%; /* Optional: Add padding to adjust content placement */
+}
+
+.security-image {
+  width: 60%; /* Largeur de l'image */
+  height: 40%; /* Hauteur de l'image */
+  object-fit: cover;  
+  border-radius: 15px; /* Rayon des coins arrondis */
+}
+
+.home-title {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.action-button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+}
