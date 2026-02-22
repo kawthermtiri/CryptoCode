@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+# CryptoCode - Application de Cryptographie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Application web éducative de cryptographie développée avec React, permettant de crypter et décrypter des messages en utilisant différents algorithmes classiques.
 
-## Available Scripts
+## 📋 Description
 
-In the project directory, you can run:
+CryptoCode est une application interactive qui permet d'apprendre et d'utiliser trois algorithmes de cryptographie classiques :
+
+- **Chiffrement de César** : Décalage de lettres avec une clé numérique
+- **Chiffrement Affine** : Chiffrement utilisant deux paramètres (a et b)
+- **Chiffrement de Vigenère** : Chiffrement polyalphabétique avec une clé alphabétique
+
+## 🚀 Fonctionnalités
+
+- ✅ Interface utilisateur intuitive en français
+- ✅ Cryptage de messages avec trois algorithmes différents
+- ✅ Décryptage de messages chiffrés
+- ✅ Validation des clés de cryptage selon l'algorithme choisi
+- ✅ Alertes interactives avec SweetAlert2
+- ✅ Design responsive et moderne
+
+## 🛠️ Technologies Utilisées
+
+- **React** (v19.2.4) - Framework JavaScript
+- **React Router DOM** (v6.0.0) - Navigation entre les pages
+- **SweetAlert2** (v11.0.0) - Alertes et notifications
+- **Create React App** - Configuration du projet
+
+## 📦 Installation
+
+1. Clonez le dépôt :
+```bash
+git clone https://github.com/kawthermtiri/CryptoCode.git
+cd CryptoCode
+```
+
+2. Installez les dépendances :
+```bash
+npm install
+```
+
+3. Démarrez l'application en mode développement :
+```bash
+npm start
+```
+
+L'application sera accessible sur [http://localhost:3000](http://localhost:3000)
+
+## 📖 Utilisation
+
+### Cryptage de messages
+
+1. Accédez à la page "Crypter"
+2. Entrez votre message en clair
+3. Entrez la clé appropriée selon l'algorithme choisi :
+   - **César** : un nombre entier (ex: 3)
+   - **Affine** : deux nombres entiers séparés par un espace (ex: 5 8)
+   - **Vigenère** : un mot composé uniquement de lettres (ex: SECRET)
+4. Cliquez sur le bouton de l'algorithme souhaité
+5. Le message crypté s'affichera à l'écran
+
+### Décryptage de messages
+
+1. Accédez à la page "Décrypter"
+2. Entrez le message crypté
+3. Entrez la même clé utilisée pour le cryptage
+4. Sélectionnez l'algorithme correspondant
+5. Le message décrypté s'affichera
+
+## 📂 Structure du Projet
+
+```
+CryptoCode/
+├── public/              # Fichiers publics (index.html, images, etc.)
+├── src/
+│   ├── components/      # Composants React
+│   │   ├── Home.js      # Page d'accueil
+│   │   ├── crypter.js   # Page de cryptage
+│   │   └── decrypter.js # Page de décryptage
+│   ├── utils/           # Fonctions utilitaires
+│   │   ├── caesarCipher.js
+│   │   ├── affineCipher.js
+│   │   └── vigenereCipher.js
+│   ├── image/           # Images de l'application
+│   ├── App.js           # Composant principal
+│   └── index.js         # Point d'entrée
+├── package.json
+└── README.md
+```
+
+## 🧪 Scripts Disponibles
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Lance l'application en mode développement.
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Lance les tests en mode interactif.
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Compile l'application pour la production dans le dossier `build`.
 
 ### `npm run eject`
+⚠️ **Opération irréversible** - Permet de personnaliser la configuration webpack.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔐 Algorithmes de Cryptographie
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Chiffrement de César
+Algorithme de substitution simple où chaque lettre est remplacée par une lettre située à une position fixe dans l'alphabet.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Chiffrement Affine
+Algorithme utilisant une fonction mathématique affine : E(x) = (ax + b) mod 26
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Chiffrement de Vigenère
+Chiffrement polyalphabétique utilisant une clé alphabétique pour déterminer le décalage de chaque lettre.
 
-## Learn More
+## 🤝 Contribution
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Les contributions sont les bienvenues ! N'hésitez pas à :
+1. Fork le projet
+2. Créer une branche pour votre fonctionnalité (`git checkout -b feature/nouvelle-fonctionnalite`)
+3. Commiter vos changements (`git commit -m 'Ajout d'une nouvelle fonctionnalité'`)
+4. Pousser vers la branche (`git push origin feature/nouvelle-fonctionnalite`)
+5. Ouvrir une Pull Request
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📝 Licence
 
-### Code Splitting
+Ce projet est un projet éducatif open source.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 👤 Auteur
 
-### Analyzing the Bundle Size
+**Kawther Mtiri**
+- GitHub: [@kawthermtiri](https://github.com/kawthermtiri)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🙏 Remerciements
 
-### Making a Progressive Web App
+- Create React App pour la configuration initiale
+- SweetAlert2 pour les alertes élégantes
+- La communauté React pour les ressources et la documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Créé avec ❤️ pour l'apprentissage de la cryptographie
